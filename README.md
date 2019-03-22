@@ -1,9 +1,9 @@
 ### 参考文档：http://www.pythondoc.com/flask-restful/second.html
-ubuntu 部署Flask：https://www.jianshu.com/p/484bd73f1e80
+### ubuntu 部署Flask：https://www.jianshu.com/p/484bd73f1e80
        部署Django：https://blog.csdn.net/qq_16069927/article/details/82079259
 
 ### FlaskAPIFBV.py
-1.设计一个简单的Web service
+#### 1.设计一个简单的Web service
     1.设定根URL来访问服务 如：http://[hostname]/todo/api/v1.0/
         在 URL 中包含应用的名称以及 API 的版本号。包含应用名称有助于提供一个命名空间以便区分同一系统上的其它服务。
         包含版本号能够帮助以后的更新
