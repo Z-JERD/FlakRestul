@@ -51,7 +51,7 @@
             class TaskAPI(Resource):
                 decorators = [auth.login_required]
 				
-jsonify 将数据序列化为JSON字符串
+###  jsonify 将数据序列化为JSON字符串
 '''
 from flask import Flask,request,render_template,jsonify
 
@@ -62,7 +62,7 @@ def upload_file():
 if __name__ == '__main__':
     app.run()
 
-返回的字符串中会多个换行符,调用接口后接受值为：'{"name":"jerd","sex":"man"}\n'
+### 返回的字符串中会多个换行符,调用接口后接受值为：'{"name":"jerd","sex":"man"}\n'
 import requests
 import json
 URL = "http://127.0.0.1:5000/index"
