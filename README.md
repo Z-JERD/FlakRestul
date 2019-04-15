@@ -52,27 +52,26 @@
                 decorators = [auth.login_required]
 				
 ###  jsonify 将数据序列化为JSON字符串
-'''
-from flask import Flask,request,render_template,jsonify
+	from flask import Flask,request,render_template,jsonify
 
-app=Flask(__name__)
-@app.route('/index',methods=['GET','POST'])
-def upload_file():
-    return jsonify({'name':'jerd','sex':'man'})
-if __name__ == '__main__':
-    app.run()
+	app=Flask(__name__)
+	@app.route('/index',methods=['GET','POST'])
+	def upload_file():
+	    return jsonify({'name':'jerd','sex':'man'})
+	if __name__ == '__main__':
+	    app.run()
 
 ### 返回的字符串中会多个换行符,调用接口后接受值为：'{"name":"jerd","sex":"man"}\n'
-import requests
-import json
-URL = "http://127.0.0.1:5000/index"
-headers = {
-        'Content-Type': "application/json",
-        'Accept-Charset': "utf-8",
-    }
-response = requests.request("POST", URL,  headers=headers)
-data = response.text   #'{"name":"jerd","sex":"man"}\n'
-json_data = json.loads(data) #{"name":"jerd","sex":"man"}
-'''
+	import requests
+	import json
+	URL = "http://127.0.0.1:5000/index"
+	headers = {
+		'Content-Type': "application/json",
+		'Accept-Charset': "utf-8",
+	    }
+	response = requests.request("POST", URL,  headers=headers)
+	data = response.text   #'{"name":"jerd","sex":"man"}\n'
+	json_data = json.loads(data) #{"name":"jerd","sex":"man"}
+
 
 
