@@ -141,8 +141,6 @@ from flask import request,render_template,redirect
 1.请求：
 	request.method 判断请求方式
 	request.args 接收GET请求携带的参数数据
-	request.form  接收POST请求form提交的数据
-	request.json  fetch请求时，request.json能获取到数据，request.form获取不到数据 使用ajax的时候，request.json获取不到数据，request.form能获取到数据
 	request.cookies
 	request.headers
 	request.path   当前请求的路径
@@ -150,6 +148,10 @@ from flask import request,render_template,redirect
 	request.url
 	request.files  接收文件
 	obj = request.files['the_file_name']
+	获取POST参数:
+	    args = request.get_data()       接收值为bytes
+	    args = request.get_json()       请求头发送参数为application/json格式, 才可以接收到 值为对象 
+	    form_name = request.form        表单数据
 2.响应：
 	1.return "xxxx" 返回字符串
     2.return render_template("index.html",msg="xxx") 返回模板
